@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ladies Essentials GH</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="script.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        .mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.hidden {
+            transform: translateX(-100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0">
+                    <a href="home.html">
+                        <img src="images/logo.png" alt="LadiesEssentialsgh Logo" class="h-16 w-16 rounded-full object-cover" style="filter: brightness(1.1) contrast(1.1);">
+                    </a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="home.html" class="text-gray-900 hover:text-pink-600 px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="product.html" class="text-gray-900 hover:text-pink-600 px-3 py-2 text-sm font-medium">Products</a>
+                        <a href="about.html" class="text-gray-900 hover:text-pink-600 px-3 py-2 text-sm font-medium">About Us</a>
+                        <a href="contact.html" class="text-gray-900 hover:text-pink-600 px-3 py-2 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <!-- Search Bar - Hidden on Mobile -->
+                <div class="hidden md:flex items-center">
+                    <div class="relative">
+                        <input type="text" id="searchInput" placeholder="Search products..." class="w-64 px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent">
+                        <i class="fa-solid fa-magnifying-glass absolute right-3 top-3 text-gray-400"></i>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" onclick="toggleMobileMenu()" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="home.html" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-pink-600">Home</a>
+                <a href="product.html" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-pink-600">Products</a>
+                <a href="about.html" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-pink-600">About Us</a>
+                <a href="contact.html" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-pink-600">Contact</a>
+            </div>
+            <!-- Mobile Search -->
+            <div class="px-4 py-3">
+                <div class="relative">
+                    <input type="text" id="mobileSearchInput" placeholder="Search products..." class="w-full px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent">
+                    <i class="fa-solid fa-magnifying-glass absolute right-3 top-3 text-gray-400"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Section -->
+    <section class="pt-20 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">Our Products</h1>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <!-- Sanitary Pad -->
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden" data-category="period-care" data-description="High-quality sanitary pad for maximum comfort and protection">
+                    <img src="images/WhatsApp Image 2025-04-25 at 9.27.12 PM.jpeg" alt="Sanitary Pad" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Sanitary Pad</h3>
+                        <p class="text-pink-600 font-bold text-lg mb-4">GH₵ 25.00</p>
+                        <button class="w-full bg-pink-600 text-white py-2 rounded-md hover:bg-pink-700 transition-colors">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Panty Liner -->
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden" data-category="period-care" data-description="Thin and comfortable panty liner for everyday freshness">
+                    <img src="images/WhatsApp Image 2025-04-25 at 9.27.13 PM.jpeg" alt="Panty Liner" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Panty Liner</h3>
+                        <p class="text-pink-600 font-bold text-lg mb-4">GH₵ 15.00</p>
+                        <button class="w-full bg-pink-600 text-white py-2 rounded-md hover:bg-pink-700 transition-colors">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Period Panties -->
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden" data-category="period-care" data-description="Reusable period panties for sustainable period care">
+                    <img src="images/WhatsApp Image 2025-04-25 at 9.27.14 PM.jpeg" alt="Period Panties" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Period Panties</h3>
+                        <p class="text-pink-600 font-bold text-lg mb-4">GH₵ 45.00</p>
+                        <button class="w-full bg-pink-600 text-white py-2 rounded-md hover:bg-pink-700 transition-colors">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Lip Gloss -->
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden" data-category="beauty" data-description="Moisturizing lip gloss in various shades">
+                    <img src="images/WhatsApp Image 2025-04-25 at 9.27.15 PM.jpeg" alt="Lip Gloss" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Lip Gloss</h3>
+                        <p class="text-pink-600 font-bold text-lg mb-4">GH₵ 20.00</p>
+                        <button class="w-full bg-pink-600 text-white py-2 rounded-md hover:bg-pink-700 transition-colors">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Scrunchies -->
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden" data-category="accessories" data-description="Stylish and soft scrunchies for your hair">
+                    <img src="images/WhatsApp Image 2025-04-25 at 9.27.16 PM.jpeg" alt="Scrunchies" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Scrunchies</h3>
+                        <p class="text-pink-600 font-bold text-lg mb-4">GH₵ 10.00</p>
+                        <button class="w-full bg-pink-600 text-white py-2 rounded-md hover:bg-pink-700 transition-colors">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Hair Clips -->
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden" data-category="accessories" data-description="Elegant hair clips to style your hair">
+                    <img src="images/WhatsApp Image 2025-04-25 at 9.27.23 PM.jpeg" alt="Hair Clips" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Hair Clips</h3>
+                        <p class="text-pink-600 font-bold text-lg mb-4">GH₵ 12.00</p>
+                        <button class="w-full bg-pink-600 text-white py-2 rounded-md hover:bg-pink-700 transition-colors">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li>Phone: 0203638315</li>
+                        <li>Email: LadiesEssentialsgh@gmail.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="home.html" class="hover:text-pink-400">Home</a></li>
+                        <li><a href="product.html" class="hover:text-pink-400">Shop</a></li>
+                        <li><a href="about.html" class="hover:text-pink-400">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-pink-400">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Social Media</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://www.instagram.com/ladiesessentialsgh/" target="_blank" class="hover:text-pink-400">Instagram</a></li>
+                        <li><a href="https://www.tiktok.com/@ladiesessentialsgh" target="_blank" class="hover:text-pink-400">TikTok</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="mb-4">Subscribe for updates and tips!</p>
+                    <form class="space-y-2">
+                        <input type="email" placeholder="Enter your email" class="w-full px-4 py-2 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        <button type="submit" class="w-full px-4 py-2 bg-pink-600 text-white rounded-md hover:bg-pink-700 transition-colors">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center">
+                <p>&copy; 2023 LadiesEssentialsgh. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

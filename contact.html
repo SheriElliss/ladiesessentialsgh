@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LadiesEssentialsgh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        .mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.hidden {
+            transform: translateX(-100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0">
+                    <img src="images/logo.png" alt="LadiesEssentialsgh Logo" class="h-16 w-16 rounded-full object-cover" style="filter: brightness(1.1) contrast(1.1);">
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="home.html" class="text-gray-900 hover:text-pink-600 px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="product.html" class="text-gray-900 hover:text-pink-600 px-3 py-2 text-sm font-medium">Products</a>
+                        <a href="about.html" class="text-gray-900 hover:text-pink-600 px-3 py-2 text-sm font-medium">About Us</a>
+                        <a href="contact.html" class="text-gray-900 hover:text-pink-600 px-3 py-2 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <!-- Search Bar - Hidden on Mobile -->
+                <div class="hidden md:flex items-center">
+                    <div class="relative">
+                        <input type="text" placeholder="Search" class="w-64 px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent">
+                        <i class="fa-solid fa-magnifying-glass absolute right-3 top-3 text-gray-400"></i>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" onclick="toggleMobileMenu()" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="home.html" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-pink-600">Home</a>
+                <a href="product.html" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-pink-600">Products</a>
+                <a href="about.html" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-pink-600">About Us</a>
+                <a href="contact.html" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-pink-600">Contact</a>
+            </div>
+            <!-- Mobile Search -->
+            <div class="px-4 py-3">
+                <div class="relative">
+                    <input type="text" placeholder="Search" class="w-full px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent">
+                    <i class="fa-solid fa-magnifying-glass absolute right-3 top-3 text-gray-400"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <div class="bg-gradient-to-r from-pink-100 to-purple-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+                <div class="text-center">
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Take Control of Your Period Care Today!</h1>
+                    <p class="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
+                        Ready to experience the comfort, confidence, and empowerment that comes with using high-quality period care products? Look no further than LadiesEssentialsgh!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Benefits Section -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+            <div class="bg-white rounded-lg shadow-sm p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Shop Now and Get:</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-center text-gray-600">
+                        <i class="fas fa-check-circle text-pink-600 mr-3"></i>
+                        Discounts on your first purchase
+                    </li>
+                    <li class="flex items-center text-gray-600">
+                        <i class="fas fa-check-circle text-pink-600 mr-3"></i>
+                        High-quality products designed with you in mind
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Shop Info Section -->
+        <div class="bg-pink-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+                <div class="text-center">
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Visit Our Website Today!</h2>
+                    <p class="text-base md:text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+                        Browse our collection of period care products, including pads, panty liners, period panties, lip glosses, scrunchies, hair clips and face masks. Our products are designed to provide comfort, protection, and confidence.
+                    </p>
+                    <a href="product.html" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-pink-600 hover:bg-pink-700">
+                        Shop Now
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Connect Section -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+            <div class="text-center">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Stay Connected!</h2>
+                <p class="text-base md:text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+                    Follow us on social media for the latest updates, tips, and promotions. Let's stay in touch and empower each other!
+                </p>
+                <div class="flex justify-center space-x-6">
+                    <a href="https://www.instagram.com/ladiesessentialsgh/" target="_blank" class="text-gray-400 hover:text-pink-600">
+                        <i class="fab fa-instagram text-4xl"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@ladiesessentialsgh" target="_blank" class="text-gray-400 hover:text-pink-600">
+                        <i class="fab fa-tiktok text-4xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li>Phone: 0203638315</li>
+                        <li>Email: LadiesEssentialsgh@gmail.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="home.html" class="hover:text-pink-400">Home</a></li>
+                        <li><a href="product.html" class="hover:text-pink-400">Shop</a></li>
+                        <li><a href="about.html" class="hover:text-pink-400">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-pink-400">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Social Media</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://www.instagram.com/ladiesessentialsgh/" target="_blank" class="hover:text-pink-400">Instagram</a></li>
+                        <li><a href="https://www.tiktok.com/@ladiesessentialsgh" target="_blank" class="hover:text-pink-400">TikTok</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="mb-4">Subscribe for updates and tips!</p>
+                    <form class="space-y-2">
+                        <input type="email" placeholder="Enter your email" class="w-full px-4 py-2 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        <button type="submit" class="w-full px-4 py-2 bg-pink-600 text-white rounded-md hover:bg-pink-700 transition-colors">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center">
+                <p>&copy; 2023 LadiesEssentialsgh. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
